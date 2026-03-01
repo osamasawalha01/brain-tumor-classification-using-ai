@@ -23,14 +23,14 @@ Libraries: OpenCV, NumPy, Matplotlib.
 ⚙️ How to Run
 Clone the Repo:
 
-Bash
+
 git clone https://github.com/osamasawalha01/brain-tumor-classification-using-ai.git
 Activate Environment:
 
-Bash
+
 conda activate brain_ai
 Run Application:
 
-Bash
+
 streamlit run app.py
 Developed by: Osama Sawalha 💻✨
