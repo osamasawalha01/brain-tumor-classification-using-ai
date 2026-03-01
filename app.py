@@ -255,8 +255,8 @@ if uploaded_file is not None:
             if st.button("📤 Send Telegram Alert"):
                 if patient_id and patient_name:
                     # Connection credentials
-                    MY_TOKEN = "8531038738:AAGtJ4gaRaDuawgoPryrAoxshjJDAGmNCQQ"
-                    MY_CHAT_ID = "1042780059"
+                  MY_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN_HERE"
+                    MY_CHAT_ID = "YOUR_CHAT_ID_HERE"
                     send_telegram_diagnostic_report(
                         MY_TOKEN, MY_CHAT_ID, patient_name, patient_id,
                         pred_class, confidence,
