@@ -1,0 +1,159 @@
+/* ===========================
+   General Dark Theme
+   =========================== */
+body, .stApp {
+    background-color: #0a0a0a !important;
+    color: #ffffff !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* ===========================
+   Sidebar Styling
+   =========================== */
+.css-1d391kg { /* sidebar container */
+    background-color: #111111 !important;
+    border-right: 3px solid #ff00ff;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+}
+.css-1d391kg h2, .css-1d391kg h3, .css-1d391kg h4 {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+/* ===========================
+   Titles & Headers
+   =========================== */
+h1, .css-1v0mbdj h1, .css-18e3th9 {
+    color: #00ffff;
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px #00ffff, 0 0 25px #ff00ff;
+    animation: neonGlow 3s ease-in-out infinite alternate;
+}
+
+/* ===========================
+   Neon Glow Animation
+   =========================== */
+@keyframes neonGlow {
+    0% { text-shadow: 0 0 5px #00ffff, 0 0 10px #ff00ff; color: #00ffff; }
+    50% { text-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff; color: #ff00ff; }
+    100% { text-shadow: 0 0 25px #00ffff, 0 0 40px #ff00ff; color: #00ffff; }
+}
+
+/* ===========================
+   Grad-CAM Image Container
+   =========================== */
+img {
+    border: 4px solid #ff00ff;
+    border-radius: 15px;
+    box-shadow: 0 0 30px #ff00ff, 0 0 50px #00ffff inset;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+img:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 0 50px #ff00ff, 0 0 80px #00ffff inset;
+}
+
+/* ===========================
+   Probability Bars
+   =========================== */
+.bar-container {
+    height: 25px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 5px 0;
+    background-color: #222;
+}
+.bar-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 12px;
+    animation: fillBar 2s forwards;
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+}
+@keyframes fillBar {
+    from { width: 0%; }
+    to { width: var(--bar-width); }
+}
+
+/* ===========================
+   Confusion Matrix
+   =========================== */
+[data-testid="stMetricLabel"] {
+    color: #00ffff;
+    font-weight: bold;
+}
+.css-1j69b5e {  /* Seaborn plots inside Streamlit */
+    border: 2px solid #ff00ff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff inset;
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+.stButton>button {
+    background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+    color: #000;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 0.6rem 1rem;
+    box-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff inset;
+    transition: all 0.3s ease-in-out;
+}
+.stButton>button:hover {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 0 25px #ff00ff, 0 0 40px #00ffff inset;
+}
+
+/* ===========================
+   Mouse Cursor
+   =========================== */
+body, .stApp {
+    cursor: url("https://i.ibb.co/9h4Hf9S/neon-cursor.png"), auto;
+}
+
+/* ===========================
+   RGB Lights Background Animation
+   =========================== */
+@keyframes rgbBackground {
+    0% { background-color: #0a0a0a; }
+    25% { background-color: #0a0a0a; box-shadow: 0 0 50px #ff00ff; }
+    50% { background-color: #0a0a0a; box-shadow: 0 0 50px #00ffff; }
+    75% { background-color: #0a0a0a; box-shadow: 0 0 50px #ff00ff; }
+    100% { background-color: #0a0a0a; box-shadow: 0 0 50px #00ffff; }
+}
+
+.stApp {
+    animation: rgbBackground 5s infinite alternate;
+}
+
+/* ===========================
+   Sidebar Slider Animation
+   =========================== */
+.css-1hynsf2 .stSlider > div > div > div:nth-child(2) > div {
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    animation: slideGradient 3s infinite alternate;
+}
+@keyframes slideGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* تنسيق الصناديق لتظهر كأنها تقارير مخبرية */
+.stMetric {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-top: 5px solid #004466;
+}
+
+/* تنسيق العناوين */
+h2 {
+    color: #004466;
+    border-bottom: 2px solid #004466;
+    padding-bottom: 10px;
+}
